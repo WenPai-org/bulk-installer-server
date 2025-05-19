@@ -1,0 +1,1003 @@
+/**
+ * Admin styles for Collection Manager
+ */
+
+/* General Layout */
+.bis-wrap {
+    margin: 20px 0;
+}
+
+.bis-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.bis-sidebar {
+    flex: 0 0 320px;
+}
+
+.bis-content {
+    flex: 1;
+    min-width: 500px;
+}
+
+@media (max-width: 1100px) {
+    .bis-container {
+        flex-direction: column;
+    }
+
+    .bis-sidebar,
+    .bis-content {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.bis-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bis-version-tag {
+    font-size: 13px;
+    padding-left: 10px;
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+/* Form Elements */
+.bis-form-section {
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.bis-section-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.bis-section-description {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    color: #646970;
+}
+
+.bis-form-row {
+    margin-bottom: 18px;
+}
+
+.bis-form-row label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.bis-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.bis-form-group {
+    margin-bottom: 4px;
+}
+
+.bis-required {
+    color: #d63638;
+}
+
+.bis-form-actions {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bis-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.bis-select {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Icon Select */
+.bis-icon-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.bis-selected-icon {
+    margin-left: 10px;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f6fc;
+    border-radius: 50%;
+    color: #2271b1;
+}
+
+/* Screenshot Upload */
+.bis-screenshot-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bis-screenshot-preview {
+    margin-top: 10px;
+}
+
+.bis-screenshot-preview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Collections List */
+.bis-collections-list {
+    margin: 15px 0;
+}
+
+.bis-collections-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bis-collection-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+.bis-collection-item:hover {
+    background: #f0f0f1;
+    border-color: #c3c4c7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bis-collection-icon {
+    flex: 0 0 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f0f5;
+    border-radius: 20px;
+    margin-right: 12px;
+}
+
+.bis-collection-icon .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: #2271b1;
+}
+
+.bis-collection-details {
+    flex: 1;
+}
+
+.bis-collection-details h4 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.bis-collection-meta {
+    font-size: 12px;
+    color: #646970;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.bis-item-count {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bis-item-count .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.bis-meta-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 11px;
+    border-radius: 10px;
+    background: #f0f0f1;
+}
+
+.bis-category-tag {
+    background: #e9f0f5;
+    color: #2271b1;
+}
+
+.bis-level-tag {
+    background: #f0f6e5;
+    color: #3c6e21;
+}
+
+.bis-collection-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.bis-collection-actions .button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bis-collection-actions .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.bis-empty-message {
+    padding: 16px;
+    background: #f0f0f1;
+    border-radius: 4px;
+    text-align: center;
+    color: #646970;
+}
+
+.bis-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bis-actions .button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bis-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* API Info */
+.bis-api-info {
+    margin: 16px 0;
+    font-size: 13px;
+}
+
+.bis-api-endpoint {
+    margin-bottom: 16px;
+}
+
+.bis-api-endpoint label,
+.bis-collection-endpoints label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bis-endpoint-url {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bis-endpoint-url code {
+    flex: 1;
+    padding: 6px 8px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+.bis-copy-url {
+    margin-left: 5px;
+}
+
+.bis-client-instructions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.bis-client-instructions h4 {
+    margin-top: 0;
+}
+
+.bis-client-instructions ol {
+    margin-left: 20px;
+}
+
+/* Export Options */
+.bis-export-options {
+    margin: 15px 0;
+}
+
+.bis-export-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.bis-export-collections {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.bis-export-collections .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Tabs */
+.bis-tabs {
+    margin-top: 20px;
+}
+
+.bis-tabs-nav {
+    display: flex;
+    border-bottom: 1px solid #c3c4c7;
+    margin-bottom: 20px;
+    gap: 4px;
+}
+
+.bis-tab {
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bis-tab .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.bis-tab.active {
+    border-color: #2271b1;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.bis-tab:hover:not(.active) {
+    color: #135e96;
+    border-color: #dcdcde;
+}
+
+.bis-tab-content {
+    display: none;
+}
+
+.bis-tab-content.active {
+    display: block;
+}
+
+/* Source Sections */
+.bis-source-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bis-source-section {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 16px;
+    background: #fbfbfb;
+}
+
+.bis-source-section h4 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.bis-source-section h4 .dashicons {
+    color: #2271b1;
+}
+
+.bis-source-description {
+    margin-top: -6px;
+    margin-bottom: 16px;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* Items */
+.bis-items-container {
+    min-height: 50px;
+    margin: 15px 0;
+    transition: all 0.2s ease;
+}
+
+.bis-item {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.bis-item:hover {
+    border-color: #c3c4c7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.bis-item-header {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    background: #f9f9f9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.bis-item-info {
+    flex: 1;
+}
+
+.bis-item-title {
+    margin: 0;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.bis-item-slug {
+    color: #646970;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.bis-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bis-item-description {
+    padding: 12px 15px;
+    color: #646970;
+    font-size: 13px;
+}
+
+.bis-item-placeholder {
+    border: 2px dashed #c3c4c7;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #f0f0f1;
+}
+
+.bis-required-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.bis-required-toggle input {
+    margin-right: 5px;
+}
+
+.bis-add-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bis-add-item .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* Modal */
+.bis-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bis-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.bis-modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bis-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.bis-modal-close {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 20px;
+}
+
+.bis-modal-close:hover {
+    color: #555;
+}
+
+.bis-modal-body {
+    padding: 20px;
+}
+
+.bis-modal-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+body.bis-modal-open {
+    overflow: hidden;
+}
+
+/* Welcome Card */
+.bis-welcome-intro {
+    font-size: 15px;
+    color: #646970;
+    margin-bottom: 24px;
+}
+
+.bis-welcome-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 24px;
+    margin: 28px 0;
+}
+
+.bis-welcome-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.bis-step-icon {
+    width: 48px;
+    height: 48px;
+    background: #e9f0f5;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bis-step-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #2271b1;
+}
+
+.bis-step-content {
+    flex: 1;
+}
+
+.bis-step-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.bis-step-content p {
+    margin: 0;
+    color: #646970;
+    font-size: 14px;
+}
+
+.bis-welcome-actions {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.bis-welcome-actions .button {
+    padding: 8px 20px;
+    height: auto;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bis-welcome-actions .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Utility Classes */
+.bis-form-actions .button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bis-form-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.description {
+    font-size: 12px;
+    color: #646970;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+/* Add some animations for better feedback */
+@keyframes highlight {
+    0% { background-color: #f0f6fc; }
+    100% { background-color: transparent; }
+}
+
+.bis-highlight {
+    animation: highlight 1.5s ease-out;
+}
+
+.bis-save-success {
+    color: #00a32a;
+}
+
+.bis-save-error {
+    color: #d63638;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body.is-dark-theme .bis-card,
+    body.is-dark-theme .bis-item,
+    body.is-dark-theme .bis-modal-content,
+    body.is-dark-theme .bis-source-section {
+        background-color: #1d2327;
+        border-color: #2c3338;
+    }
+
+    body.is-dark-theme .bis-item-header {
+        background-color: #2c3338;
+        border-color: #3c434a;
+    }
+
+    body.is-dark-theme .bis-section-title,
+    body.is-dark-theme .bis-form-section,
+    body.is-dark-theme .bis-form-actions,
+    body.is-dark-theme .bis-modal-header,
+    body.is-dark-theme .bis-modal-footer {
+        border-color: #3c434a;
+    }
+
+    body.is-dark-theme .bis-collection-item {
+        background-color: #2c3338;
+        border-color: #3c434a;
+    }
+
+    body.is-dark-theme .bis-collection-item:hover {
+        background-color: #32373c;
+        border-color: #50575e;
+    }
+
+    body.is-dark-theme .bis-endpoint-url code {
+        background-color: #2c3338;
+    }
+
+    body.is-dark-theme .bis-empty-message {
+        background-color: #2c3338;
+    }
+
+    body.is-dark-theme .bis-tabs-nav {
+        border-color: #3c434a;
+    }
+}
+/**
+ * 需要添加到 admin.css 文件中的通知样式
+ */
+
+/* 通知消息样式 */
+.bis-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    background: #fff;
+    border-left: 4px solid #72aee6;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 999999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 400px;
+}
+
+.bis-notification-show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.bis-notification-success {
+    border-left-color: #00a32a;
+}
+
+.bis-notification-error {
+    border-left-color: #d63638;
+}
+
+.bis-notification-warning {
+    border-left-color: #dba617;
+}
+
+.bis-notification .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: #72aee6;
+}
+
+.bis-notification-success .dashicons {
+    color: #00a32a;
+}
+
+.bis-notification-error .dashicons {
+    color: #d63638;
+}
+
+.bis-notification-warning .dashicons {
+    color: #dba617;
+}
+
+.bis-notification-message {
+    flex: 1;
+    font-size: 14px;
+}
+
+.bis-notification-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #646970;
+}
+
+.bis-notification-close:hover {
+    color: #1d2327;
+}
+
+.bis-notification-close .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: inherit;
+}
+
+/* 加载蒙层 */
+.bis-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    color: #fff;
+}
+
+.bis-loading-overlay .spinner {
+    float: none;
+    margin: 0 auto 10px;
+    background-color: #fff;
+}
+
+/* 暗色模式支持 */
+body.is-dark-theme .bis-notification {
+    background-color: #2c3338;
+    color: #f0f0f1;
+}
+
+body.is-dark-theme .bis-notification-close {
+    color: #a7aaad;
+}
+
+body.is-dark-theme .bis-notification-close:hover {
+    color: #f0f0f1;
+}
+/**
+ * 为slug显示和工具提示添加的额外CSS样式
+ *
+ */
+
+/* Slug 展示样式 */
+.bis-slug-display {
+    margin-bottom: 18px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    border-left: 3px solid #2271b1;
+}
+
+.bis-slug-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bis-slug-info {
+    padding: 5px 8px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #3c434a;
+    flex-grow: 1;
+}
+
+.bis-regenerate-slug {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bis-regenerate-slug .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* 工具提示样式 */
+.bis-tooltip {
+    position: relative;
+    cursor: help;
+    color: #646970;
+}
+
+.bis-tooltip .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.bis-tooltip-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    width: max-content;
+}
+
+.bis-tooltip-content::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+/* 暗色模式支持 */
+body.is-dark-theme .bis-slug-display {
+    background-color: #2c3338;
+    border-left-color: #72aee6;
+}
+
+body.is-dark-theme .bis-slug-info {
+    background-color: #1d2327;
+    color: #f0f0f1;
+}
+
+body.is-dark-theme .bis-tooltip-content {
+    background-color: #1d2327;
+    color: #f0f0f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.is-dark-theme .bis-tooltip-content::before {
+    border-color: transparent transparent #1d2327 transparent;
+}
